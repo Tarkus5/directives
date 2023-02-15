@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'directives';
+  showSecret = false;
+  log: any = []; //Il compilatore di TS vuole il tipo any se non inizializzi un array tipizzato (se quindi non metti array di numeri, stringhe, etc...)
+
+
+  onToggleDetails() {
+    this.showSecret = !this.showSecret;
+    this.log.push(this.log.length + 1);
+  }
+
+
 }
+
+
